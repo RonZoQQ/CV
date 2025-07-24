@@ -1,0 +1,154 @@
+ html, body {
+      min-height: 100%;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('/sep09.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #f0f0f0;
+      line-height: 1.6;
+    }
+    header {
+      background-color: transparent;
+      padding: 4rem 2rem 2rem;
+      text-align: center;
+      position: relative;
+      z-index: 10;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+    }
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #00ffe1;
+      margin-top: 1rem;
+    }
+    .contact-info {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+    .contact-info a {
+      color: #00ffe1;
+      text-decoration: none;
+    }
+    section {
+      padding: 2rem;
+      border-bottom: 1px solid #222;
+      position: relative;
+      z-index: 10;
+      background-color: rgba(0, 0, 0, 0.6);
+      margin: 1rem;
+      border-radius: 8px;
+    }
+    h2 {
+      color: #00ffe1;
+      margin-bottom: 1rem;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    ul li::before {
+      content: '•';
+      color: #00ffe1;
+      margin-right: 0.5rem;
+    }
+    .language-skill {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+    .dots {
+      display: flex;
+      margin-left: 1rem;
+    }
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #444;
+      margin-right: 6px;
+    }
+    .dot.filled {
+      background-color: #00ffe1;
+    }
+    .rain {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+    .rain.back-row {
+      display: none;
+      z-index: 0;
+      bottom: 60px;
+      opacity: 0.5;
+    }
+    body.back-row-toggle .rain.back-row {
+      display: block;
+    }
+    .drop {
+      position: absolute;
+      bottom: 100%;
+      width: 15px;
+      height: 120px;
+      pointer-events: none;
+      animation: drop 0.5s linear infinite;
+    }
+    @keyframes drop {
+      0% { transform: translateY(0vh); }
+      75% { transform: translateY(90vh); }
+      100% { transform: translateY(90vh); }
+    }
+    .stem {
+      width: 1px;
+      height: 60%;
+      margin-left: 7px;
+      background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.25));
+      animation: stem 0.5s linear infinite;
+    }
+    @keyframes stem {
+      0%, 65% { opacity: 1; }
+      75%, 100% { opacity: 0; }
+    }
+    .splat {
+      width: 15px;
+      height: 10px;
+      border-top: 2px dotted rgba(255,255,255,0.5);
+      border-radius: 50%;
+      opacity: 1;
+      transform: scale(0);
+      animation: splat 0.5s linear infinite;
+      display: none;
+    }
+    body.splat-toggle .splat {
+      display: block;
+    }
+    @keyframes splat {
+      0%, 80% { opacity: 1; transform: scale(0); }
+      90% { opacity: 0.5; transform: scale(1); }
+      100% { opacity: 0; transform: scale(1.5); }
+    }
+    .neon {
+  color: #fff;
+  text-shadow:
+    0 0 5px #ccc,
+    0 0 10px #ccc,
+    0 0 20px #0cc,     
+    0 0 40px #0cc,
+    0 0 80px #0cc,
+    0 0 100px rgba(0,255,255,0.3), 
+    0 0 150px rgba(0,255,255,0.2);
+}
