@@ -2,7 +2,7 @@
       min-height: 100%;
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: url('/tausta.jpg') no-repeat center center fixed;
+      background: url('tausta.jpg') no-repeat center center fixed;
       background-size: cover;
       color: #f0f0f0;
       line-height: 1.6;
